@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3488BAF-1F51-48AD-A704-3871E44F6981}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyQuanCoffee</RootNamespace>
+    <AssemblyName>QuanLyQuanCoffee</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\Ban.cs" />
+    <Compile Include="DB\CaLam.cs" />
+    <Compile Include="DB\CtCaLam.cs" />
+    <Compile Include="DB\CTHoaDon.cs" />
+    <Compile Include="DB\HoaDon.cs" />
+    <Compile Include="DB\Loai.cs" />
+    <Compile Include="DB\Model1.cs" />
+    <Compile Include="DB\NhanVien.cs" />
+    <Compile Include="DB\sysdiagram.cs" />
+    <Compile Include="DB\TaiKhoan.cs" />
+    <Compile Include="DB\ThucUong.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoá_Đơn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoá_Đơn.Designer.cs">
+      <DependentUpon>Hoá_Đơn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QlTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QlTaiKhoan.Designer.cs">
+      <DependentUpon>QlTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy2.Designer.cs">
+      <DependentUpon>QuanLy2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportThongKe.Designer.cs">
+      <DependentUpon>ReportThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeDoanhThu.cs" />
+    <Compile Include="Đăngnhap2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăngnhap2.Designer.cs">
+      <DependentUpon>Đăngnhap2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đăng_Nhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăng_Nhập.Designer.cs">
+      <DependentUpon>Đăng_Nhập.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoá_Đơn.resx">
+      <DependentUpon>Hoá_Đơn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QlTaiKhoan.resx">
+      <DependentUpon>QlTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy2.resx">
+      <DependentUpon>QuanLy2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDoanhThu.rdlc" />
+    <EmbeddedResource Include="ReportThongKe.resx">
+      <DependentUpon>ReportThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đăngnhap2.resx">
+      <DependentUpon>Đăngnhap2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đăng_Nhập.resx">
+      <DependentUpon>Đăng_Nhập.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLy.resx">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ThongKeDoanhThu.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos-printerr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-invoices-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-invoices-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-invoices-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Show-Property-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mug-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhung-mau-giay-dan-tuong-thu-hut-khach-cho-quan-cafe-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019bc661bb206d239f6efdad1fef6f52.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e6a6cfe2be0a59f63a85f32fb712f0c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5431067-coffee-cafe-coffee-coffee-png-and-vector-with-transparent-coffee-logo-png-1200_1200_preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\157-1577106_nuestra-historia-de-cafe-hd-png-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019bc661bb206d239f6efdad1fef6f521.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43310913.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-shop-background-1500x430.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cocktail-Screwdriver-Orange-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-cafe-coffee-bean-western-coffee-lahua-menu-poster-image_135292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-cafe-coffee-bean-western-coffee-lahua-menu-poster-background-template-image_135400.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
